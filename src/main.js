@@ -1,4 +1,5 @@
 import Vue from "vue";
+import './plugins/fontawesome'
 import VueTypedJs from "vue-typed-js";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faUserSecret } from "@fortawesome/free-solid-svg-icons";

@@ -1,7 +1,7 @@
 <template>
-  <v-footer dark height="auto">
+  <v-footer dark height="auto" class="footer">
     <v-card class="flex" flat tile>
-      <v-card-title class="teal">
+      <v-card-title class="indigo">
         <strong class="subheading">Get connected with us on social networks!</strong>
 
         <v-spacer></v-spacer>
@@ -24,8 +24,8 @@ export default {
   name: "Footer",
   data: () => ({
     icons: [
-      "send",
       "fab fa-facebook",
+      "fab fa-twitter",
       "fab fa-google-plus",
       "fab fa-linkedin",
       "fab fa-instagram"
@@ -35,4 +35,9 @@ export default {
 </script>
 
 <style>
+.footer {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
 </style>

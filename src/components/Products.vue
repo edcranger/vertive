@@ -2,7 +2,7 @@
   <v-flex x12 class="text-xs-center">
     <v-btn large round flat color="primary">
       <v-icon large class="mr-2">archive</v-icon>
-      <h1>Products</h1>
+      <h1>Innovations</h1>
     </v-btn>
     <v-container fluid>
       <v-layout row class="my-5 pt-5">
