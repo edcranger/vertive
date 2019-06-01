@@ -77,7 +77,7 @@
 <script>
 export default {
   name: "Services",
-  props: ["techLogos"]
+  props: ["servicesData"]
 };
 </script>
 
