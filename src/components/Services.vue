@@ -6,9 +6,9 @@
     </v-btn>
 
     <v-layout row wrap>
-      <v-flex xs12 sm4 pa-3>
+      <v-flex xs12 sm4 pa-3 v-for="(sData, index) in servicesData" :key="index">
         <v-card>
-          <v-img class="white--text" :src="require('@/assets/services/1.png')">
+          <v-img class="white--text" :src="sData.imgSrc">
             <v-container fill-height fluid>
               <v-layout fill-height>
                 <v-flex xs12 align-end flexbox></v-flex>
@@ -17,56 +17,13 @@
           </v-img>
           <v-card-title>
             <div>
-              <span class="headline">Web Application (PWA)</span>
+              <span class="headline">{{sData.name}}</span>
               <br>
               <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, facere.</span>
             </div>
           </v-card-title>
           <v-card-actions>
             <v-btn flat color="orange">Details</v-btn>
-            <v-btn flat color="orange">Pricing</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-flex>
-
-      <v-flex xs12 sm4 pa-3>
-        <v-card>
-          <v-img class="black--text" :src="require('@/assets/services/3.png')">
-            <v-container fill-height fluid>
-              <v-layout fill-height></v-layout>
-            </v-container>
-          </v-img>
-          <v-card-title>
-            <div>
-              <span class="headline">Mobile Application</span>
-              <br>
-              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, facere.</span>
-            </div>
-          </v-card-title>
-          <v-card-actions>
-            <v-btn flat color="orange">Details</v-btn>
-            <v-btn flat color="orange">Pricing</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-flex>
-
-      <v-flex xs12 sm4 pa-3>
-        <v-card>
-          <v-img class="white--text" :src="require('@/assets/services/2.png')">
-            <v-container fill-height fluid>
-              <v-layout fill-height></v-layout>
-            </v-container>
-          </v-img>
-          <v-card-title>
-            <div>
-              <span class="headline">Desktop Application</span>
-              <br>
-              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, facere.</span>
-            </div>
-          </v-card-title>
-          <v-card-actions>
-            <v-btn flat color="orange">Details</v-btn>
-            <v-btn flat color="orange">Pricing</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -77,7 +34,7 @@
 <script>
 export default {
   name: "Services",
-  props: ["servicesData"]
+  props: ["techLogos", "servicesData"]
 };
 </script>
 

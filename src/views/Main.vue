@@ -11,7 +11,7 @@
       </v-flex>
     </v-layout>
     <Technologies :techLogos="techLogos"/>
-    <Services :techLogos="techLogos"/>
+    <Services :servicesData="servicesData"/>
     <Products id="#products"/>
     <v-layout row>
       <v-flex xs12></v-flex>
@@ -57,6 +57,26 @@ export default {
         },
         {
           src: require("@/assets/web/8.png")
+        }
+      ],
+      servicesData: [
+        {
+          name: "Business AppDevelopment",
+          imgSrc: require("@/assets/services/1.png"),
+          content:
+            "This is a sample text for the business app This is a sample text for the business appThis is a sample text for the business appThis is a sample text for the business app"
+        },
+        {
+          name: "Multi-Platform App Development",
+          imgSrc: require("@/assets/services/2.png"),
+          content:
+            "This is a sample text for the business app This is a sample text for the business appThis is a sample text for the business appThis is a sample text for the business app"
+        },
+        {
+          name: "Content Writing and Web Design",
+          imgSrc: require("@/assets/services/3.png"),
+          content:
+            "This is a sample text for the business app This is a sample text for the business appThis is a sample text for the business appThis is a sample text for the business app"
         }
       ]
     };
