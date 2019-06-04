@@ -53,10 +53,10 @@ export default {
     return {
       drawer: false,
       links: [
-        { text: "Home", route: "/", icon: "dashboard" },
+        { text: "Home", route: "/", icon: "fas fa-home" },
         { text: "Careers", route: "/careers", icon: "supervised_user_circle" },
-        { text: "Services", route: "", icon: "accessibility_new" },
-        { text: "About", route: "/about", icon: "accessibility_new" }
+        { text: "Services", route: "", icon: "fas fa-tachometer-alt" },
+        { text: "About", route: "/about", icon: "fas fa-copyright" }
       ]
     };
   }

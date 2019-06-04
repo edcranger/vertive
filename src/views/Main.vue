@@ -61,7 +61,7 @@ export default {
       ],
       servicesData: [
         {
-          name: "Business AppDevelopment",
+          name: "Business App Development",
           imgSrc: require("@/assets/services/1.png"),
           content:
             "This is a sample text for the business app This is a sample text for the business appThis is a sample text for the business appThis is a sample text for the business app"
