@@ -27,7 +27,7 @@
           ></v-img>
         </v-flex>
         <v-flex xs6>
-          <h1>nUrDex</h1>
+          <h1>NurDex</h1>
           <p
             class="mt-4"
           >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam deleniti ut recusandae tempore aspernatur tenetur, nostrum eveniet iure modi, nisi exercitationem, cum expedita dolore. Libero labore provident ratione impedit vitae?</p>

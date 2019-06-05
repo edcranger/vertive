@@ -5,7 +5,7 @@
       <h1>technologies</h1>
     </v-btn>
     <v-container fluid>
-      <h3>We are an ideal offshore partner for organizations seeking quality software development. We deliver web development services and mobile app development services through our team of software developers who do specialize in the use of the following technologies.</h3>
+      <h3>We offer company to company partnership that can help our clients establish their quality business solutions through software development, automations and creative innovations by the use of these technologies:</h3>
     </v-container>
 
     <v-container>

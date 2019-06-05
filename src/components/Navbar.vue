@@ -55,7 +55,6 @@ export default {
       links: [
         { text: "Home", route: "/", icon: "fas fa-home" },
         { text: "Careers", route: "/careers", icon: "supervised_user_circle" },
-        { text: "Services", route: "", icon: "fas fa-tachometer-alt" },
         { text: "About", route: "/about", icon: "fas fa-copyright" }
       ]
     };

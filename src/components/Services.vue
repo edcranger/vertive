@@ -18,12 +18,10 @@
           <v-card-title>
             <div>
               <span class="headline">{{sData.name}}</span>
-              <br>
-              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, facere.</span>
             </div>
           </v-card-title>
           <v-card-actions>
-            <v-btn flat color="orange">Details</v-btn>
+            <v-btn flat color="orange" route :to="{name: sData.link, params: sData.link }">Details</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -34,7 +32,8 @@
 <script>
 export default {
   name: "Services",
-  props: ["techLogos", "servicesData"]
+  props: ["techLogos", "servicesData"],
+  components: {}
 };
 </script>
 
