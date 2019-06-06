@@ -21,7 +21,7 @@
             </div>
           </v-card-title>
           <v-card-actions>
-            <v-btn flat color="orange" route :to="{name: sData.link, params: sData.link }">Details</v-btn>
+            <v-btn flat color="orange" route :to="{name: sData.link }">Details</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
