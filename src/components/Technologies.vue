@@ -9,8 +9,8 @@
     </v-container>
 
     <v-container>
-      <v-layout row wrap>
-        <v-flex xs2 class="pa-1 my-button" v-for="(techLogo,index) in techLogos" :key="index">
+      <v-layout align-center justify-space-around row wrap>
+        <v-flex xs2 class="my-button" v-for="(techLogo,index) in techLogos" :key="index">
           <v-img :src="techLogo.src"></v-img>
         </v-flex>
       </v-layout>
