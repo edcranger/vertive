@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-content>
+    <v-content class="grey lighten-4">
       <Navbar/>
       <router-view :servicesData="servicesData" :techLogos="techLogos"></router-view>
       <Footer/>

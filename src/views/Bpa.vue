@@ -29,7 +29,7 @@
                 fill-dot
               >
                 <v-card :color="item.color" class="fontc" dark>
-                  <v-card-title class="title">{{item.title}}</v-card-title>
+                  <v-card-title class="fontc">{{item.title}}</v-card-title>
                   <v-card-text class="white text--primary">
                     <p>{{item.content}}</p>
                   </v-card-text>

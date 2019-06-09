@@ -10,8 +10,9 @@
         </div>
       </v-flex>
     </v-layout>
+    <Services :servicesData="servicesData" class="mb-5"/>
     <Technologies :techLogos="techLogos"/>
-    <Services :servicesData="servicesData"/>
+
     <Products id="#products"/>
     <v-layout row>
       <v-flex xs12></v-flex>
