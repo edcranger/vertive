@@ -5,9 +5,13 @@
       <h1 class="font-weight-black display-3 orange--text mb-3">Automation</h1>
       <v-layout row wrap>
         <v-flex xs12 md6 class="textStyle mb-3">
-          <h3>Business Process Automation (BPA) is a process of managing information, data and processes to reduce costs, resources and investment. BPA increases productivity by automating key business processes through computing technology.</h3>
+          <h2
+            class="font-weight-light"
+          >Business Process Automation (BPA) is a process of managing information, data and processes to reduce costs, resources and investment. BPA increases productivity by automating key business processes through computing technology.</h2>
           <br>
-          <h3>The BPA process is geared toward implementing software applications to automate routine business tasks through initiation, execution and completion, while achieving enterprise-wide workflow efficiency. An Enterprise Resource Planning (ERP) system is often conceived as a BPA implementation outcome.</h3>
+          <h2
+            class="font-weight-light"
+          >The BPA process is geared toward implementing software applications to automate routine business tasks through initiation, execution and completion, while achieving enterprise-wide workflow efficiency. An Enterprise Resource Planning (ERP) system is often conceived as a BPA implementation outcome.</h2>
         </v-flex>
         <v-flex xs12 md6 class="textStyle pa-3">
           <v-img :src="require('@/assets/bpa/bpa.png')"></v-img>
@@ -29,9 +33,9 @@
                 fill-dot
               >
                 <v-card :color="item.color" class="fontc" dark>
-                  <v-card-title class="fontc">{{item.title}}</v-card-title>
+                  <v-card-title class="fonttc">{{item.title}}</v-card-title>
                   <v-card-text class="white text--primary">
-                    <p>{{item.content}}</p>
+                    <p class="fontc">{{item.content}}</p>
                   </v-card-text>
                 </v-card>
               </v-timeline-item>
@@ -90,6 +94,11 @@ export default {
   margin-bottom: 11rem;
 }
 .fontc {
-  font-size: calc(0.6vw + 0.8vh);
+  font-size: calc(0.5vw + 0.7vh);
+  text-align: center;
+}
+.fonttc {
+  font-size: calc(0.8vw + 0.9vh);
+  text-align: center;
 }
 </style>

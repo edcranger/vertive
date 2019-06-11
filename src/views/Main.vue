@@ -12,25 +12,18 @@
     </v-layout>
     <Services :servicesData="servicesData" class="mb-5"/>
     <Technologies :techLogos="techLogos"/>
-
-    <Products id="#products"/>
-    <v-layout row>
-      <v-flex xs12></v-flex>
-    </v-layout>
   </div>
 </template>
 
 <script>
 import Technologies from "@/components/Technologies";
 import Services from "@/components/Services";
-import Products from "@/components/Products";
 
 export default {
   name: "Main",
   components: {
     Technologies,
-    Services,
-    Products
+    Services
   },
   props: ["techLogos", "servicesData"],
   data() {
@@ -40,4 +33,7 @@ export default {
 </script>
 
 <style scoped>
+.main {
+  margin-bottom: 11rem;
+}
 </style>

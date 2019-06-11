@@ -6,7 +6,7 @@
     </v-btn>
 
     <v-layout row wrap>
-      <v-flex xs12 sm4 pa-3 v-for="(sData, index) in servicesData" :key="index">
+      <v-flex xs12 sm4 pa-3 v-for="(sData, index) in servicesData" :key="index" class="mb-4">
         <v-card>
           <v-img class="white--text" :src="sData.imgSrc"></v-img>
           <v-card-title>
