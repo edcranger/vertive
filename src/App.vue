@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-content class="grey lighten-4">
+    <v-content>
       <Navbar/>
       <router-view :servicesData="servicesData" :techLogos="techLogos"></router-view>
       <Footer/>
@@ -51,17 +51,20 @@ export default {
         {
           name: "Business Process Automation",
           imgSrc: require("@/assets/services/1.png"),
-          link: "bpa"
+          link: "bpa",
+          color: "purple accent-2"
         },
         {
           name: "Cross-Platform App Development",
           imgSrc: require("@/assets/services/3.png"),
-          link: "cpad"
+          link: "cpad",
+          color: "lime accent-3"
         },
         {
           name: "Embedded Systems Development",
           imgSrc: require("@/assets/services/2.png"),
-          link: "esd"
+          link: "esd",
+          color: "light-blue accent-3"
         }
       ]
     };
