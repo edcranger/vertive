@@ -2,44 +2,23 @@
   <div class="main">
     <v-layout row wrap>
       <v-flex xs12>
-        <div>
-          <v-img class="logoImg" :src="require('@/assets/1.png')"/>
-          <v-btn relative large round dark bottom left color="pink">
-            <h1>Get Started</h1>
-          </v-btn>
-        </div>
+        <v-img class="logoImg" :src="require('@/assets/1.png')"/>
+        <v-btn relative large round dark bottom left color="pink">
+          <h1>Get Started</h1>
+        </v-btn>
       </v-flex>
     </v-layout>
-    <v-content class="mt-0">
-      <v-layout row wrap>
-        <v-flex xs12 class="mb-3">
-          <p class="servicesTitle text-xs-center font-weight-black">Our Services</p>
-        </v-flex>
-        <v-layout align-center justify-space-around fill-height>
-          <v-flex
-            xs4
-            class="text-xs-center"
-            v-for="(servicesIcon, index) in servicesIcons"
-            :key="index"
-          >
-            <v-btn color="indigo" class="iconSize" depressed fab large dark>
-              <v-icon class="iconSize">{{servicesIcon.icon}}</v-icon>
-            </v-btn>
-            <p class="text-xs-center">{{servicesIcon.description}}</p>
-          </v-flex>
-        </v-layout>
-      </v-layout>
-    </v-content>
-
+    <Services :servicesData="servicesData" class="mb-2"/>
     <Bpa/>
     <Cpad/>
     <Esd/>
-    <Services :servicesData="servicesData" class="mb-5"/>
+
     <Technologies :techLogos="techLogos"/>
   </div>
 </template>
 
 <script>
+import Services from "@/components/Services";
 import Bpa from "@/components/Bpa.vue";
 import Cpad from "@/components/Cpad.vue";
 import Esd from "@/components/Esd.vue";
@@ -51,7 +30,8 @@ export default {
     Technologies,
     Bpa,
     Cpad,
-    Esd
+    Esd,
+    Services
   },
   props: ["techLogos", "servicesData"],
   data() {
