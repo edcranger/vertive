@@ -1,5 +1,5 @@
 <template>
-  <div class="services pa-3">
+  <div class="services pa-4">
     <v-flex x12 class="text-xs-center round white--text pa-3 elevation-2 white">
       <v-btn large round flat color="orange">
         <v-icon large class="mr-2">archive</v-icon>

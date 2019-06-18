@@ -1,5 +1,5 @@
 <template>
-  <div class="bpa pa-3">
+  <div class="bpa pa-4">
     <v-container fluid class="bpa-content elevation-2 white">
       <p class="servicesTitle font-weight-black text-xs-center">
         Business Process
@@ -8,11 +8,13 @@
       <v-container fluid>
         <v-img :src="require('@/assets/bpa/bpa.png')"></v-img>
         <v-layout row justify-center>
-          <v-btn outline large color="primary" dark @click.stop="dialog = true">Details</v-btn>
+          <v-btn large class="mt-4" color="indigo" dark @click.stop="dialog = true">Learn More</v-btn>
 
           <v-dialog v-model="dialog" max-width="1090">
-            <v-card>
-              <v-card-title class="headline">Business Process Automation</v-card-title>
+            <v-card class="pa-2">
+              <v-card-title class="headline">
+                <h3>Business Process Automation</h3>
+              </v-card-title>
 
               <v-card-text>Business Process Automation (BPA) is a process of managing information, data and processes to reduce costs, resources and investment. BPA increases productivity by automating key business processes through computing technology.</v-card-text>
               <v-card-text>The BPA process is geared toward implementing software applications to automate routine business tasks through initiation, execution and completion, while achieving enterprise-wide workflow efficiency. An Enterprise Resource Planning (ERP) system is often conceived as a BPA implementation outcome.</v-card-text>

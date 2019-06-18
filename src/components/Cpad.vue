@@ -1,5 +1,5 @@
 <template>
-  <div class="cpad pa-3">
+  <div class="cpad pa-4">
     <v-container fluid row wrap class="pa-3 elevation-2 white">
       <v-layout row wrap>
         <v-flex xs12 class="text-xs-left">
@@ -19,9 +19,8 @@
 
           <div class="text-xs-center mt-4">
             <v-btn
-              outline
               large
-              color="primary"
+              color="deep-orange darken-4"
               class="text-xs-center"
               dark
               @click.stop="dialog = true"
@@ -57,10 +56,10 @@
                   <h3>{{item.title}}</h3>
                 </v-flex>
                 <v-flex class="text-xs-right" xs7>
-                  <v-tooltip left max-width="330">
+                  <v-tooltip left max-width="350">
                     <template v-slot:activator="{ on }">
                       <v-btn small class="white--text" dark v-on="on" fab :color="item.color">
-                        <v-icon>info</v-icon>
+                        <v-icon>fas fa-info</v-icon>
                       </v-btn>
                     </template>
                     <span>{{item.content}}</span>
@@ -92,13 +91,13 @@ export default {
           title: "Reduced Costs",
           content: `This one’s a simple matter of doing the math. Less time and effort spent in development equals lower cost. With only a single mobile app to develop, not only does its creation move more quickly, but quality testing is also a simpler matter, as are deployment and ongoing support. The costs for all related services are reduced dramatically by opting for cross-platform mobile app development, thus allowing your enterprise to see that ROI more quickly, too.`,
           iconClass: `fas fa-piggy-bank`,
-          color: "pink"
+          color: "pink lighten-3"
         },
         {
           title: "Easy Integration With the Cloud",
           content: `Cross-platform mobile apps are easily and instantly able to be integrated into the cloud for hosting services. Developing an almost universally compatible app means that businesses can take full advantage of all the money-saving benefits that cloud hosting has to offer. Security is also easier to handle, since there is only one app to shield, rather than several.`,
           iconClass: `fas fa-cloud-upload-alt`,
-          color: "grey"
+          color: "amber lighten-2"
         },
         {
           title: "Quick Deployment",
@@ -118,7 +117,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .textStyle {
   text-align: justify;
 }

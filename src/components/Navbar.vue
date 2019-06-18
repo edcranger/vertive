@@ -2,14 +2,7 @@
   <nav>
     <v-toolbar app class="indigo">
       <v-toolbar-side-icon @click="drawer = !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
-      <v-img
-        :src="require('@/assets/logo.png')"
-        class="mr-5"
-        contain
-        height="348"
-        width="128"
-        max-width="190"
-      />
+      <v-img :src="require('@/assets/logo.png')" class="mr-5" contain width="170" max-width="150"/>
 
       <v-spacer></v-spacer>
 
