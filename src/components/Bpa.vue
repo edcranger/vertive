@@ -1,7 +1,7 @@
 <template>
   <div class="bpa pa-3">
-    <v-container fluid class="bpa-content elevation-2">
-      <p class="servicesTitle font-weight-black mt-5 text-xs-center">
+    <v-container fluid class="bpa-content elevation-2 white">
+      <p class="servicesTitle font-weight-black text-xs-center">
         Business Process
         <span class="orange--text">Automation</span>
       </p>

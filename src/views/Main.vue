@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="main yellow darken-2">
     <v-layout row wrap>
       <v-flex xs12>
         <v-img class="logoImg" :src="require('@/assets/1.png')"/>

@@ -1,6 +1,6 @@
 <template>
   <div class="services pa-3">
-    <v-flex x12 class="text-xs-center round white--text pa-3 elevation-2">
+    <v-flex x12 class="text-xs-center round white--text pa-3 elevation-2 white">
       <v-btn large round flat color="orange">
         <v-icon large class="mr-2">archive</v-icon>
         <h1>Services</h1>
@@ -16,9 +16,7 @@
               </div>
             </v-card-title>
             <v-card-actions>
-              <v-btn :color="sData.color" absolute fab bottom route :to="{name: sData.link }">
-                <v-icon>far fa-hand-point-up</v-icon>
-              </v-btn>
+              <v-btn :color="sData.color" fab bottom route :to="{name: sData.link }">Info</v-btn>
             </v-card-actions>
           </v-card>
         </v-flex>
