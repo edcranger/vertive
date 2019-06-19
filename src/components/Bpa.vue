@@ -11,19 +11,28 @@
           <v-btn large class="mt-4" color="indigo" dark @click.stop="dialog = true">Learn More</v-btn>
 
           <v-dialog v-model="dialog" max-width="1090">
-            <v-card class="pa-2">
-              <v-card-title class="headline">
-                <h3>Business Process Automation</h3>
+            <v-card class>
+              <v-card-title class="headline indigo">
+                <h3 class="white--text">Business Process Automation</h3>
               </v-card-title>
+              <v-container fluid>
+                <v-card-text
+                  class="subheading"
+                >Business Process Automation (BPA) is a process of managing information, data and processes to reduce costs, resources and investment. BPA increases productivity by automating key business processes through computing technology.</v-card-text>
+                <v-card-text
+                  class="subheading"
+                >The BPA process is geared toward implementing software applications to automate routine business tasks through initiation, execution and completion, while achieving enterprise-wide workflow efficiency. An Enterprise Resource Planning (ERP) system is often conceived as a BPA implementation outcome.</v-card-text>
 
-              <v-card-text>Business Process Automation (BPA) is a process of managing information, data and processes to reduce costs, resources and investment. BPA increases productivity by automating key business processes through computing technology.</v-card-text>
-              <v-card-text>The BPA process is geared toward implementing software applications to automate routine business tasks through initiation, execution and completion, while achieving enterprise-wide workflow efficiency. An Enterprise Resource Planning (ERP) system is often conceived as a BPA implementation outcome.</v-card-text>
+                <v-card-action>
+                  <Inquire/>
+                </v-card-action>
 
-              <v-card-actions>
-                <v-spacer></v-spacer>
+                <v-card-actions>
+                  <v-spacer></v-spacer>
 
-                <v-btn color="green darken-1" flat="flat" @click="dialog = false">Close</v-btn>
-              </v-card-actions>
+                  <v-btn color="green darken-1" flat="flat" @click="dialog = false">Close</v-btn>
+                </v-card-actions>
+              </v-container>
             </v-card>
           </v-dialog>
         </v-layout>
@@ -34,7 +43,7 @@
           <div class="text-xs-center">
             <v-icon :color="item.color" size="30">{{item.icon}}</v-icon>
             <p :class="item.color + '--text'" class="text-xs-center title">{{item.title}}</p>
-            <p class="benef subheading">{{item.content}}</p>
+            <p class="benef">{{item.content}}</p>
           </div>
         </v-flex>
       </v-layout>
@@ -43,9 +52,13 @@
 </template>
 
 <script>
+import Inquire from "@/components/Inquire";
+
 export default {
   name: "Bpa",
-
+  components: {
+    Inquire
+  },
   data() {
     return {
       dialog: false,
@@ -103,6 +116,6 @@ export default {
 }
 
 .benef {
-  text-align: justify;
+  text-align: center;
 }
 </style>

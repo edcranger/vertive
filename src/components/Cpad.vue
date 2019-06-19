@@ -17,7 +17,7 @@
             <v-img :src="require('@/assets/bpa/cpad.png')"></v-img>
           </div>
 
-          <div class="text-xs-center mt-4">
+          <div class="text-xs-center mt-3">
             <v-btn
               large
               color="deep-orange darken-4"
@@ -42,6 +42,10 @@
               </v-card-actions>
             </v-card>
           </v-dialog>
+
+          <p
+            class="mt-3 text-xs-center subheading"
+          >Cross-platform mobile development benefits companies with faster development speeds and cost-effectiveness. And, this is what makes this framework the preferred choice of businesses globally.</p>
         </v-flex>
         <v-flex xs12 md6 class="textStyle pa-3">
           <v-timeline dense clipped v-for="(item, index) in items" :key="index">

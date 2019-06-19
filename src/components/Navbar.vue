@@ -48,6 +48,11 @@ export default {
       links: [
         { text: "Home", route: "/", icon: "fas fa-home" },
         { text: "Careers", route: "/careers", icon: "supervised_user_circle" },
+        {
+          text: "Blog",
+          route: "/blod",
+          icon: "fas fa-blog"
+        },
         { text: "About", route: "/about", icon: "fas fa-copyright" }
       ]
     };
