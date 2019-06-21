@@ -18,30 +18,9 @@
           </div>
 
           <div class="text-xs-center mt-3">
-            <v-btn
-              large
-              color="deep-orange darken-4"
-              class="text-xs-center"
-              dark
-              @click.stop="dialog = true"
-            >Learn More</v-btn>
+            <!--Button for Dialog for contact us--->
+            <LearnMore :servicesInfo="servicesInfo"/>
           </div>
-
-          <v-dialog v-model="dialog" max-width="1090">
-            <v-card class="pa-2">
-              <v-card-title class="headline">
-                <h3>Cross-Platform App Development</h3>
-              </v-card-title>
-
-              <v-card-text>Cross-platform app development is a common approach among businesses today. It supports the development of custom mobile apps that are compatible across mobile platforms. Targeting many segments helps organizations to reach out to more users and, thus, increase the market share. It helps address the challenges for businesses, software vendors, and mobile development teams.</v-card-text>
-
-              <v-card-actions>
-                <v-spacer></v-spacer>
-
-                <v-btn color="green darken-1" flat="flat" @click="dialog = false">Close</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
 
           <p
             class="mt-3 text-xs-center subheading"
@@ -79,8 +58,13 @@
 </template>
 
 <script>
+import LearnMore from "@/components/LearnMore";
 export default {
   name: "Cpad",
+  props: ["servicesInfo"],
+  components: {
+    LearnMore
+  },
   data() {
     return {
       dialog: false,

@@ -56,13 +56,13 @@ export default {
         },
         {
           name: "Cross-Platform App Development",
-          imgSrc: require("@/assets/services/3.png"),
+          imgSrc: require("@/assets/services/2.png"),
           link: "cpad",
           color: "lime accent-3"
         },
         {
           name: "Embedded Systems Development",
-          imgSrc: require("@/assets/services/2.png"),
+          imgSrc: require("@/assets/services/3.png"),
           link: "esd",
           color: "light-blue accent-3"
         }

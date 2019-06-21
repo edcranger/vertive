@@ -7,7 +7,7 @@
       </v-btn>
 
       <v-layout row wrap>
-        <v-flex xs12 sm4 pa-3 v-for="(sData, index) in servicesData" :key="index" class="mb-4">
+        <v-flex xs12 sm4 pa-3 v-for="(sData, index) in servicesData" :key="index" class="mb-4 pa-5">
           <v-card flat>
             <v-img class="white--text" :src="sData.imgSrc"></v-img>
             <v-card-title>
@@ -15,9 +15,6 @@
                 <span class="headline">{{sData.name}}</span>
               </div>
             </v-card-title>
-            <v-card-actions>
-              <v-btn :color="sData.color" fab bottom route :to="{name: sData.link }">Info</v-btn>
-            </v-card-actions>
           </v-card>
         </v-flex>
       </v-layout>

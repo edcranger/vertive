@@ -8,10 +8,10 @@
         </v-btn>
       </v-flex>
     </v-layout>
-    <Services :servicesData="servicesData" class="mb-2"/>
-    <Bpa/>
-    <Cpad/>
-    <Esd/>
+    <Services :servicesData="servicesData"/>
+    <Bpa :servicesInfo="servicesInfo[0]"/>
+    <Cpad :servicesInfo="servicesInfo[1]"/>
+    <Esd :servicesInfo="servicesInfo[2]"/>
 
     <Technologies :techLogos="techLogos"/>
   </div>
@@ -45,6 +45,29 @@ export default {
         {
           icon: "fas fa-microchip",
           description: "Embedded Systems Development"
+        }
+      ],
+      servicesInfo: [
+        {
+          title: "Business Process Automation",
+          content:
+            "Business Process Automation (BPA) is a process of managing information, data and processes to reduce costs, resources and investment. BPA increases productivity by automating key business processes through computing technology geared toward implementing software applications to automate routine business tasks through initiation, execution and completion, while achieving enterprise-wide workflow efficiency. An Enterprise Resource Planning (ERP) system is often conceived as a BPA implementation outcome.",
+          classHeading: "headline indigo",
+          color: "indigo"
+        },
+        {
+          title: "Cross-Platform App Development",
+          content:
+            "Cross-platform app development is a common approach among businesses today. It supports the development of custom mobile apps that are compatible across mobile platforms. Targeting many segments helps organizations to reach out to more users and, thus, increase the market share. It helps address the challenges for businesses, software vendors, and mobile development teams.",
+          classHeading: "headline deep-orange",
+          color: "deep-orange"
+        },
+        {
+          title: "Embedded Systems Development",
+          content:
+            "Embedded systems is a field derived through a combined study of software and hardware. Both aspects come together to create a functional targeting device that possesses the advantages of adaptability, speed, accuracy, reliability, power, and smaller size. Embedded systems possess a wide array of utility in the fields of mobile communication, electronic payment solutions, vending machines, robotic arm, and medical equipments. They can be designed for specific applications in each field and can thus fulfil specialized purposes.",
+          classHeading: "headline cyan",
+          color: "cyan"
         }
       ]
     };

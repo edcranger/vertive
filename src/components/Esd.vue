@@ -4,36 +4,14 @@
       <p class="servicesTitle font-weight-black">
         <span class="orange--text">Embedded</span>
         <br>Systems Development
-      </p>>
+      </p>
       <v-layout row wrap>
         <v-flex xs12 class="textStyle pa-3">
           <v-img :src="require('@/assets/bpa/esd.png')"></v-img>
 
           <div class="text-xs-center mt-2">
-            <v-btn
-              large
-              color="cyan"
-              class="text-xs-center"
-              dark
-              @click.stop="dialog = true"
-            >Learn More</v-btn>
+            <LearnMore :servicesInfo="servicesInfo"/>
           </div>
-
-          <v-dialog v-model="dialog" max-width="1090">
-            <v-card class="pa-2">
-              <v-card-title class="headline">
-                <h3>Embedded Systems Development</h3>
-              </v-card-title>
-
-              <v-card-text>Embedded systems is a field derived through a combined study of software and hardware. Both aspects come together to create a functional targeting device that possesses the advantages of adaptability, speed, accuracy, reliability, power, and smaller size. Embedded systems possess a wide array of utility in the fields of mobile communication, electronic payment solutions, vending machines, robotic arm, and medical equipments. They can be designed for specific applications in each field and can thus fulfil specialized purposes.</v-card-text>
-
-              <v-card-actions>
-                <v-spacer></v-spacer>
-
-                <v-btn color="green darken-1" flat="flat" @click="dialog = false">Close</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
         </v-flex>
         <v-flex xs12 class="textStyle mb-3">
           <h2
@@ -52,8 +30,13 @@
 </template>
 
 <script>
+import LearnMore from "@/components/LearnMore";
 export default {
   name: "Esd",
+  props: ["servicesInfo"],
+  components: {
+    LearnMore
+  },
   data() {
     return {
       dialog: false,

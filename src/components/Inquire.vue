@@ -1,22 +1,28 @@
 <template>
   <div class="inquire">
     <v-container fluid>
-      <h1>Inquire Now</h1>
-      <v-layout row>
+      <h1 class="cyan--text text-xs-center">Inquire Now</h1>
+      <v-layout row class="text-xs-center">
         <v-flex>
           <h2>We'd Love to hear from you!</h2>
           <h3
             class="subheading"
           >If you like to know more about this service, please use the contact form below.</h3>
-          <v-card class="mt-3" style="max-width: 500px;">
-            <v-toolbar color="indigo" cards dark flat>
+          <v-card class="mt-3" style="max-width: 500px; ">
+            <v-toolbar :color="servicesInfo.color" cards dark flat>
               <v-btn icon>
                 <v-icon>far fa-comment-dots</v-icon>
               </v-btn>
               <v-card-title class="title font-weight-regular">Message Us</v-card-title>
             </v-toolbar>
             <v-form ref="form" v-model="form" class="pa-3 pt-4">
-              <v-select v-model="select" :items="items" label="Select" required></v-select>
+              <v-text-field
+                v-model="servicesInfo.title"
+                color="deep-purple"
+                disabled
+                label="Services"
+                style="min-height: 96px"
+              ></v-text-field>
 
               <v-text-field
                 v-model="name"
@@ -41,7 +47,7 @@
                 label="Email address"
                 type="email"
               ></v-text-field>
-              <v-textarea v-model="bio" auto-grow color="deep-purple" label="Message" rows="2"></v-textarea>
+              <v-textarea v-model="message" auto-grow color="deep-purple" label="Message" rows="2"></v-textarea>
             </v-form>
             <v-divider></v-divider>
             <v-card-actions>
@@ -65,15 +71,10 @@
 <script>
 export default {
   name: "Inquire",
+  props: ["servicesInfo"],
   data: () => ({
-    select: null,
-    items: [
-      "Business Process Automation",
-      "Cross-Platform App",
-      "Embedded Systems"
-    ],
-    agreement: false,
-    bio: "",
+    services: "",
+    message: "",
     dialog: false,
     email: undefined,
     form: false,
