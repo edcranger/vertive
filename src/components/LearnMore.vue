@@ -1,12 +1,6 @@
 <template>
   <div class="learn-more">
-    <v-btn
-      large
-      class="mt-4"
-      :color="servicesInfo.color"
-      dark
-      @click.stop="dialog = true"
-    >Learn More</v-btn>
+    <v-btn large class :color="servicesInfo.color" dark @click.stop="dialog = true">Learn More</v-btn>
     <v-dialog v-model="dialog" full-width>
       <v-card class>
         <v-card-title :class="servicesInfo.classHeading">
@@ -14,10 +8,10 @@
         </v-card-title>
         <v-container fluid>
           <v-layout row wrap>
-            <v-flex xs12 md6>
+            <!-- <v-flex xs12 md6>
               <v-icon size="80" color="cyan" class="ml-3">fas fa-angle-double-down</v-icon>
               <v-card-text class="subheading">{{servicesInfo.content}}</v-card-text>
-            </v-flex>
+            </v-flex>-->
             <v-flex xs12 md6>
               <v-card-action>
                 <Inquire :servicesInfo="servicesInfo"/>

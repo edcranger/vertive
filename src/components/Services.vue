@@ -1,24 +1,27 @@
 <template>
-  <div class="services pa-4">
-    <v-flex x12 class="text-xs-center round white--text pa-3 elevation-2 white">
-      <v-btn large round flat color="orange">
-        <v-icon large class="mr-2">archive</v-icon>
-        <h1>Services</h1>
-      </v-btn>
-
+  <div class="services grey darken-4">
+    <v-flex xs12 class="text-xs-center py-3">
       <v-layout row wrap>
-        <v-flex xs12 sm4 pa-3 v-for="(sData, index) in servicesData" :key="index" class="mb-4 pa-5">
-          <v-card flat>
-            <v-img class="white--text" :src="sData.imgSrc"></v-img>
-            <v-card-title>
-              <div>
-                <span class="headline">{{sData.name}}</span>
-              </div>
-            </v-card-title>
+        <v-flex xs4 sm4 v-for="(sData, index) in servicesData" :key="index">
+          <v-card flat class="grey darken-4 white--text">
+            <v-img height="50" :src="sData.imgSrc" contain></v-img>
+            <div class="mt-1">
+              <span class="logoFont">{{sData.name}}</span>
+            </div>
           </v-card>
         </v-flex>
       </v-layout>
     </v-flex>
+
+    <v-parallax
+      height="350"
+      src="https://cdn3.vectorstock.com/i/1000x1000/02/57/desert-parallax-background-night-vector-9450257.jpg"
+      class="paraSize"
+    >
+      <div class="mt-5">
+        <v-img height="450" class="mt-5" :src="require('@/assets/services/opening.png')" contain></v-img>
+      </div>
+    </v-parallax>
   </div>
 </template>
 
@@ -30,5 +33,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.servicesTitle {
+  font-size: calc(3vw + 1vh);
+  text-align: end;
+}
+
+.logoFont {
+  font-size: calc(0.7vw + 1vh);
+}
 </style>

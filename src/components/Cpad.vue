@@ -1,6 +1,6 @@
 <template>
-  <div class="cpad pa-4">
-    <v-container fluid row wrap class="pa-3 elevation-2 white">
+  <div class="cpad">
+    <v-container fluid row wrap class="pa-3 white--text purple darken-4">
       <v-layout row wrap>
         <v-flex xs12 class="text-xs-left">
           <p class="font-weight-black servicesTitle">
@@ -23,7 +23,7 @@
           </div>
 
           <p
-            class="mt-3 text-xs-center subheading"
+            class="mt-3 text-xs-center white--text subheading"
           >Cross-platform mobile development benefits companies with faster development speeds and cost-effectiveness. And, this is what makes this framework the preferred choice of businesses globally.</p>
         </v-flex>
         <v-flex xs12 md6 class="textStyle pa-3">

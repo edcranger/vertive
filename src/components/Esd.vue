@@ -1,6 +1,6 @@
 <template>
-  <div class="esd pa-4">
-    <v-container fluid class="bpa-content elevation-2 white">
+  <div class="esd yellow lighten-3">
+    <v-container fluid class="bpa-content">
       <p class="servicesTitle font-weight-black">
         <span class="orange--text">Embedded</span>
         <br>Systems Development

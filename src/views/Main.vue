@@ -1,18 +1,14 @@
 <template>
-  <div class="main yellow darken-2">
+  <div class="main purple darken-4">
     <v-layout row wrap>
       <v-flex xs12>
-        <v-img class="logoImg" :src="require('@/assets/1.png')"/>
-        <v-btn relative large round dark bottom left color="pink">
-          <h1>Get Started</h1>
-        </v-btn>
+        <v-img class="logoImg" :src="require('@/assets/carousel/1.png')"/>
       </v-flex>
     </v-layout>
     <Services :servicesData="servicesData"/>
     <Bpa :servicesInfo="servicesInfo[0]"/>
     <Cpad :servicesInfo="servicesInfo[1]"/>
     <Esd :servicesInfo="servicesInfo[2]"/>
-
     <Technologies :techLogos="techLogos"/>
   </div>
 </template>
@@ -21,6 +17,7 @@
 import Services from "@/components/Services";
 import Bpa from "@/components/Bpa.vue";
 import Cpad from "@/components/Cpad.vue";
+
 import Esd from "@/components/Esd.vue";
 import Technologies from "@/components/Technologies";
 
