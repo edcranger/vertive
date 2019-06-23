@@ -4,11 +4,17 @@
     <v-container>
       <v-layout row wrap v-for="(item,index) in items" :key="index" class="job">
         <v-flex xs12>
-          <h1 class="text-xs-center">{{item.title}}</h1>
-          <v-img height="600" :src="item.pic" contain/>
+          <h1 class="text-xs-center" data-aos="zoom-in-right">{{item.title}}</h1>
+          <v-img height="600" :src="item.pic" contain data-aos="zoom-in-left"/>
         </v-flex>
         <v-flex xs12>
-          <v-layout row wrap v-for="(skill,index) in item.skills" :key="index">
+          <v-layout
+            row
+            wrap
+            v-for="(skill,index) in item.skills"
+            :key="index"
+            data-aos="zoom-out-up"
+          >
             <v-flex xs1>
               <v-icon class="mr-2">star</v-icon>
             </v-flex>

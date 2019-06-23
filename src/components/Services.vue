@@ -13,13 +13,15 @@
       </v-layout>
     </v-flex>
 
-    <v-parallax
-      height="350"
-      src="https://cdn3.vectorstock.com/i/1000x1000/02/57/desert-parallax-background-night-vector-9450257.jpg"
-      class="paraSize"
-    >
+    <v-parallax height="350" :src="require('@/assets/parallax/parallax1.jpg')" class="paraSize">
       <div class="mt-5">
-        <v-img height="450" class="mt-5" :src="require('@/assets/services/opening.png')" contain></v-img>
+        <v-img
+          height="450"
+          class="mt-5"
+          :src="require('@/assets/services/opening.png')"
+          contain
+          data-aos="flip-left"
+        ></v-img>
       </div>
     </v-parallax>
   </div>

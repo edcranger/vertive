@@ -20,7 +20,14 @@
         </v-flex>
       </v-layout>
       <v-layout align-center justify-space-around row wrap fill-height class="mt-4">
-        <v-flex xs6 md2 class="text-xs-center" v-for="(item, index) in items" :key="index">
+        <v-flex
+          xs6
+          md2
+          class="text-xs-center"
+          v-for="(item, index) in items"
+          :key="index"
+          data-aos="flip-left"
+        >
           <v-icon size="60" :color="item.color">{{item.icon}}</v-icon>
           <p class="text-xs-center mt-2">{{item.title}}</p>
         </v-flex>

@@ -27,7 +27,15 @@
           >Cross-platform mobile development benefits companies with faster development speeds and cost-effectiveness. And, this is what makes this framework the preferred choice of businesses globally.</p>
         </v-flex>
         <v-flex xs12 md6 class="textStyle pa-3">
-          <v-timeline dense clipped v-for="(item, index) in items" :key="index">
+          <v-timeline
+            dense
+            clipped
+            v-for="(item, index) in items"
+            :key="index"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <v-timeline-item class="mb-3" :color="item.color" icon-color="grey lighten-2" large>
               <template v-slot:icon>
                 <span>

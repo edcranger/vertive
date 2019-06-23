@@ -1,9 +1,6 @@
 <template>
   <div class="technologies">
-    <v-parallax
-      height="340"
-      src="https://thumbs.gfycat.com/AdmirableRapidAdmiralbutterfly-size_restricted.gif"
-    >
+    <v-parallax height="340" :src="require('@/assets/parallax/parallax2.gif')">
       <v-container fluid class="tech-content">
         <v-flex x12 class="text-xs-center">
           <v-container fluid class>

@@ -13,7 +13,15 @@
       </v-container>
 
       <v-layout row wrap class="mt-2">
-        <v-flex xs12 md6 class="textStyle mb-3 pa-4" v-for="(item, index) in items" :key="index">
+        <v-flex
+          xs12
+          md6
+          class="textStyle mb-3 pa-4"
+          v-for="(item, index) in items"
+          :key="index"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <div class="text-xs-center">
             <v-icon :color="item.color" size="30">{{item.icon}}</v-icon>
             <p :class="item.color + '--text'" class="text-xs-center title">{{item.title}}</p>

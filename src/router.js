@@ -27,19 +27,9 @@ export default new Router({
       component: About
     },
     {
-      path: "/bpa",
-      name: "bpa",
-      component: Bpa
-    },
-    {
       path: "/cpad",
       name: "cpad",
       component: Cpad
-    },
-    {
-      path: "/esd",
-      name: "esd",
-      component: Esd
     }
   ]
 });
