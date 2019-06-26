@@ -1,5 +1,5 @@
 <template>
-  <v-footer dark height="auto" class="footer">
+  <v-footer dark class="footer mt-4">
     <v-card class="flex purple darken-4" flat tile>
       <v-card-title class="purple darken-4">
         <strong class="subheading">Get connected with us on social networks!</strong>
@@ -12,7 +12,7 @@
       </v-card-title>
 
       <v-card-actions class="grey darken-3 justify-center">
-        &copy;2018 —
+        &copy;2019 —
         <strong>Vertive Interactive</strong>
       </v-card-actions>
     </v-card>
@@ -23,21 +23,16 @@
 export default {
   name: "Footer",
   data: () => ({
-    icons: [
-      "fab fa-facebook",
-      "fab fa-twitter",
-      "fab fa-google-plus",
-      "fab fa-linkedin",
-      "fab fa-instagram"
-    ]
+    icons: ["fab fa-facebook", "fab fa-instagram"]
   })
 };
 </script>
 
 <style>
 .footer {
-  bottom: 0;
+  margin-top: 11rem;
   width: 100%;
+  bottom: 0;
   position: absolute;
 }
 </style>

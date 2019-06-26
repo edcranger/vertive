@@ -1,6 +1,6 @@
 <template>
-  <div class="cpad">
-    <v-container fluid row wrap class="pa-3 white--text purple darken-4">
+  <div class="cpad purple darken-4">
+    <v-container row wrap class="pa-3 white--text">
       <v-layout row wrap>
         <v-flex xs12 class="text-xs-left">
           <p class="font-weight-black servicesTitle">
@@ -18,8 +18,13 @@
           </div>
 
           <div class="text-xs-center mt-3">
-            <!--Button for Dialog for contact us--->
-            <LearnMore :servicesInfo="servicesInfo"/>
+            <v-btn
+              large
+              class="white--text"
+              :color="servicesInfo.color"
+              route
+              :to="{name: 'learnMore', params: {service_id: servicesInfo.servId }}"
+            >Learn More</v-btn>
           </div>
 
           <p
@@ -34,7 +39,7 @@
             :key="index"
             data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
+            data-aos-duration="3000"
           >
             <v-timeline-item class="mb-3" :color="item.color" icon-color="grey lighten-2" large>
               <template v-slot:icon>
@@ -66,13 +71,10 @@
 </template>
 
 <script>
-import LearnMore from "@/components/LearnMore";
 export default {
   name: "Cpad",
   props: ["servicesInfo"],
-  components: {
-    LearnMore
-  },
+  components: {},
   data() {
     return {
       dialog: false,

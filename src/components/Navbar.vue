@@ -1,7 +1,7 @@
 <template>
   <nav>
     <v-toolbar app class="purple darken-4">
-      <v-toolbar-side-icon @click="drawer = !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
+      <v-toolbar-side-icon @click="drawer = !drawer" class="hidden-md-and-up white"></v-toolbar-side-icon>
       <v-img :src="require('@/assets/logo.png')" class="mr-5" contain width="170" max-width="150"/>
 
       <v-spacer></v-spacer>
@@ -48,7 +48,6 @@ export default {
       links: [
         { text: "Home", route: "/", icon: "fas fa-home" },
         { text: "Careers", route: "/careers", icon: "supervised_user_circle" },
-
         { text: "About", route: "/about", icon: "fas fa-copyright" }
       ]
     };

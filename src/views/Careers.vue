@@ -1,29 +1,35 @@
 <template>
   <div class="careers white">
-    <v-img height="300" :src="require('@/assets/services/join.png')" contain></v-img>
     <v-container>
-      <v-layout row wrap v-for="(item,index) in items" :key="index" class="job">
-        <v-flex xs12>
-          <h1 class="text-xs-center" data-aos="zoom-in-right">{{item.title}}</h1>
-          <v-img height="600" :src="item.pic" contain data-aos="zoom-in-left"/>
-        </v-flex>
-        <v-flex xs12>
-          <v-layout
-            row
-            wrap
-            v-for="(skill,index) in item.skills"
-            :key="index"
-            data-aos="zoom-out-up"
-          >
-            <v-flex xs1>
-              <v-icon class="mr-2">star</v-icon>
-            </v-flex>
-            <v-flex xs11 class="pa-1">
-              <span>{{skill}}</span>
-            </v-flex>
-          </v-layout>
-        </v-flex>
-      </v-layout>
+      <v-img height="300" :src="require('@/assets/services/join.png')" contain></v-img>
+      <p
+        class="text-xs-center subheading"
+        data-aos="zoom-out-up"
+      >We are looking for talented individuals for these job posts</p>
+      <v-container class="mt-5">
+        <v-layout row wrap v-for="(item,index) in items" :key="index" class="job">
+          <v-flex xs12>
+            <h1 class="text-xs-center" data-aos="zoom-in-right">{{item.title}}</h1>
+            <v-img height="600" :src="item.pic" contain data-aos="zoom-in-left"/>
+          </v-flex>
+          <v-flex xs12>
+            <v-layout
+              row
+              wrap
+              v-for="(skill,index) in item.skills"
+              :key="index"
+              data-aos="zoom-out-up"
+            >
+              <v-flex xs1>
+                <v-icon class="mr-2">star</v-icon>
+              </v-flex>
+              <v-flex xs11 class="pa-1">
+                <span>{{skill}}</span>
+              </v-flex>
+            </v-layout>
+          </v-flex>
+        </v-layout>
+      </v-container>
     </v-container>
   </div>
 </template>

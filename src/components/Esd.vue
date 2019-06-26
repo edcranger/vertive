@@ -1,16 +1,24 @@
 <template>
   <div class="esd yellow lighten-3">
-    <v-container fluid class="bpa-content">
+    <v-container class="bpa-content">
       <p class="servicesTitle font-weight-black">
         <span class="orange--text">Embedded</span>
         <br>Systems Development
       </p>
       <v-layout row wrap>
         <v-flex xs12 class="textStyle pa-3">
-          <v-img :src="require('@/assets/bpa/esd.png')"></v-img>
+          <v-container class="pa-5">
+            <v-img :src="require('@/assets/bpa/esd.svg')" contain></v-img>
+          </v-container>
 
           <div class="text-xs-center mt-2">
-            <LearnMore :servicesInfo="servicesInfo"/>
+            <v-btn
+              large
+              class="white--text"
+              :color="servicesInfo.color"
+              route
+              :to="{name: 'learnMore', params: {service_id: servicesInfo.servId }}"
+            >Learn More</v-btn>
           </div>
         </v-flex>
         <v-flex xs12 class="textStyle mb-3">
@@ -27,6 +35,7 @@
           v-for="(item, index) in items"
           :key="index"
           data-aos="flip-left"
+          data-aos-duration="1000"
         >
           <v-icon size="60" :color="item.color">{{item.icon}}</v-icon>
           <p class="text-xs-center mt-2">{{item.title}}</p>
@@ -37,13 +46,10 @@
 </template>
 
 <script>
-import LearnMore from "@/components/LearnMore";
 export default {
   name: "Esd",
   props: ["servicesInfo"],
-  components: {
-    LearnMore
-  },
+  components: {},
   data() {
     return {
       dialog: false,

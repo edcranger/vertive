@@ -4,45 +4,50 @@
       <v-container fluid class="tech-content">
         <v-flex x12 class="text-xs-center">
           <v-container fluid class>
-            <v-btn large round flat>
-              <v-icon large class="mr-2 white--text">archive</v-icon>
-              <h1 class="white--text text-xs-center">technologies</h1>
+            <v-btn large round flat class="mt-3">
+              <h1 class="white--text text-xs-center fonttc">technologies</h1>
             </v-btn>
-            <h3
-              class="font-weight-light subheading"
-            >We offer company to company partnership that can help our clients establish their quality business solutions through software development, automations and creative innovations by the use of these technologies:</h3>
+            <p
+              class="fontc font-weight-light"
+            >We offer company to company partnership that can help our clients establish their quality business solutions through software development, automations and creative innovations by the use of these technologies:</p>
           </v-container>
 
-          <v-carousel hide-delimiters interval="5000" height="120" class="elevation-0">
+          <v-carousel
+            hide-delimiters
+            hide-controls="true"
+            interval="5000"
+            height="120"
+            class="elevation-0 mb-5"
+          >
             <v-carousel-item>
-              <v-layout align-center row fill-height>
-                <v-flex>
-                  <v-img :src="require('@/assets/web/1.png')" height="90" contain></v-img>
+              <v-layout align-center row>
+                <v-flex xs3>
+                  <v-img :src="require('@/assets/web/1.png')" height="60" contain></v-img>
                 </v-flex>
-                <v-flex>
-                  <v-img :src="require('@/assets/web/2.png')" height="90" contain></v-img>
+                <v-flex xs3>
+                  <v-img :src="require('@/assets/web/2.png')" height="60" contain></v-img>
                 </v-flex>
-                <v-flex>
-                  <v-img :src="require('@/assets/web/3.png')" height="90" contain></v-img>
+                <v-flex xs3>
+                  <v-img :src="require('@/assets/web/3.png')" height="60" contain></v-img>
                 </v-flex>
-                <v-flex>
-                  <v-img :src="require('@/assets/web/4.png')" height="90" contain></v-img>
+                <v-flex xs3>
+                  <v-img :src="require('@/assets/web/4.png')" height="60" contain></v-img>
                 </v-flex>
               </v-layout>
             </v-carousel-item>
             <v-carousel-item>
-              <v-layout align-center row fill-height>
-                <v-flex>
-                  <v-img :src="require('@/assets/web/5.png')" height="80" contain></v-img>
+              <v-layout align-center row>
+                <v-flex xs3>
+                  <v-img :src="require('@/assets/web/5.png')" height="60" contain></v-img>
                 </v-flex>
-                <v-flex>
-                  <v-img :src="require('@/assets/web/6.png')" height="80" contain></v-img>
+                <v-flex xs3>
+                  <v-img :src="require('@/assets/web/6.png')" height="60" contain></v-img>
                 </v-flex>
-                <v-flex>
-                  <v-img :src="require('@/assets/web/7.png')" height="80" contain></v-img>
+                <v-flex xs3>
+                  <v-img :src="require('@/assets/web/7.png')" height="60" contain></v-img>
                 </v-flex>
-                <v-flex>
-                  <v-img :src="require('@/assets/web/8.png')" height="80" contain></v-img>
+                <v-flex xs3>
+                  <v-img :src="require('@/assets/web/8.png')" height="60" contain></v-img>
                 </v-flex>
               </v-layout>
             </v-carousel-item>
@@ -79,4 +84,17 @@ export default {
 </script>
 
 <style>
+.technologies {
+  bottom: 0;
+}
+
+.fontc {
+  font-size: calc(0.9vw + 0.9vh);
+  text-align: center;
+}
+
+.fonttc {
+  font-size: calc(0.8vw + 0.9vh);
+  text-align: center;
+}
 </style>

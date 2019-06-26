@@ -3,13 +3,15 @@ import Router from "vue-router";
 import Main from "./views/Main.vue";
 import Careers from "./views/Careers.vue";
 import About from "./views/About.vue";
-import Bpa from "./views/Bpa.vue";
-import Cpad from "./views/Cpad.vue";
-import Esd from "./views/Esd.vue";
+import LearnMore from "./views/LearnMore.vue";
 
 Vue.use(Router);
 
 export default new Router({
+  mode: "history",
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  },
   routes: [
     {
       path: "/",
@@ -27,9 +29,9 @@ export default new Router({
       component: About
     },
     {
-      path: "/cpad",
-      name: "cpad",
-      component: Cpad
+      path: "/learnMore/:service_id",
+      name: "learnMore",
+      component: LearnMore
     }
   ]
 });

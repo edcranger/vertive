@@ -1,5 +1,5 @@
 <template>
-  <div class="main purple darken-4">
+  <div class="main">
     <v-layout row wrap>
       <v-flex xs12>
         <v-img class="logoImg" :src="require('@/assets/carousel/1.png')"/>
@@ -46,6 +46,7 @@ export default {
       ],
       servicesInfo: [
         {
+          servId: 1,
           title: "Business Process Automation",
           content:
             "Business Process Automation (BPA) is a process of managing information, data and processes to reduce costs, resources and investment. BPA increases productivity by automating key business processes through computing technology geared toward implementing software applications to automate routine business tasks through initiation, execution and completion, while achieving enterprise-wide workflow efficiency. An Enterprise Resource Planning (ERP) system is often conceived as a BPA implementation outcome.",
@@ -53,6 +54,7 @@ export default {
           color: "indigo"
         },
         {
+          servId: 2,
           title: "Cross-Platform App Development",
           content:
             "Cross-platform app development is a common approach among businesses today. It supports the development of custom mobile apps that are compatible across mobile platforms. Targeting many segments helps organizations to reach out to more users and, thus, increase the market share. It helps address the challenges for businesses, software vendors, and mobile development teams.",
@@ -60,6 +62,7 @@ export default {
           color: "deep-orange"
         },
         {
+          servId: 3,
           title: "Embedded Systems Development",
           content:
             "Embedded systems is a field derived through a combined study of software and hardware. Both aspects come together to create a functional targeting device that possesses the advantages of adaptability, speed, accuracy, reliability, power, and smaller size. Embedded systems possess a wide array of utility in the fields of mobile communication, electronic payment solutions, vending machines, robotic arm, and medical equipments. They can be designed for specific applications in each field and can thus fulfil specialized purposes.",
@@ -73,10 +76,6 @@ export default {
 </script>
 
 <style scoped>
-.main {
-  margin-bottom: 11rem;
-}
-
 .servicesTitle {
   font-size: calc(3vw + 1vh);
 }
