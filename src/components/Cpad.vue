@@ -5,7 +5,7 @@
         <v-flex xs12 class="text-xs-left">
           <p class="font-weight-black servicesTitle">
             Cross-Platform
-            <br>
+            <br />
             <span class="orange--text">App Development</span>
           </p>
         </v-flex>
@@ -39,7 +39,7 @@
             :key="index"
             data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
-            data-aos-duration="3000"
+            data-aos-duration="1000"
           >
             <v-timeline-item class="mb-3" :color="item.color" icon-color="grey lighten-2" large>
               <template v-slot:icon>

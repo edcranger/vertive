@@ -1,9 +1,9 @@
 <template>
-  <div class="bpa yellow lighten-3">
+  <div class="bpa">
     <v-container class="bpa-content">
       <p class="servicesTitle font-weight-black text-xs-center">
-        Business Process
-        <span class="orange--text">Automation</span>
+        Business
+        <span class="orange--text">Solutions</span>
       </p>
       <v-container>
         <v-img :src="require('@/assets/bpa/bpa.svg')" contain></v-img>
@@ -11,7 +11,7 @@
           <v-btn
             large
             class="white--text"
-            :color="servicesInfo.color"
+            color="deep-purple darken-1"
             route
             :to="{name: 'learnMore', params: {service_id: servicesInfo.servId }}"
           >Learn More</v-btn>
@@ -26,7 +26,7 @@
           v-for="(item, index) in items"
           :key="index"
           data-aos="fade-up"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
         >
           <div class="text-xs-center elevation-3 deep-purple darken-1 pa-3 rounded-bg">
             <v-icon color="white" size="30">{{item.icon}}</v-icon>
@@ -50,32 +50,33 @@ export default {
       dialogColor: null,
       items: [
         {
-          title: "Optimization of primary processes",
+          title: "eCommerce Development",
           content:
-            "Shortening of the production cycle, equipment optimization, and action resources minimization. Reduces the number of errors and increases the data process speed. Implement of workflow to get rid of mistakes and process inconsistencies.",
-          color: "red",
-          icon: "fas fa-tachometer-alt"
+            " Online Store is a hit nowadays since online shopping is the preferred way of buying things as the customers enjoy the convenience and will decrease personal and travel cost for the consumers. ",
+          color: "green",
+          icon: "fas fa-store"
         },
         {
-          title: "User Friendly",
+          title: "Business Software Development",
           content:
-            "Gain ability to use different systems from different platforms, without the worker having to memorize which screens to use will lead to cost-effectiveness since they are automatically available and with a significant increase of execution speed.",
+            "Custom software will generally produce the most efficient system as it can provide support for the specific needs of the business, which might not be available in an off-the-shelf solution and will provide greater efficiency or better customer service.",
           color: "indigo",
           icon: "fas fa-child"
         },
         {
+          title: "Process Automation",
+          content:
+            "Shortening of the production cycle and cost, equipment optimization. Reduces the number of errors and increases the data process speed. Implement of workflow to get rid of mistakes and process inconsistencies.",
+          color: "red",
+          icon: "fas fa-tachometer-alt"
+        },
+
+        {
           title: "Realtime Support",
           content:
-            "Monitor and control results in real time in a global aspect as well in a detailed way, helping the decision-making and traceability of the process – concluded or in progress.",
+            "Customer posting reviews and ratings on retailer's website, monitor and control results in real time in a global aspect as well in a detailed way, helping the decision-making and traceability of the process – concluded or in progress.",
           color: "purple",
           icon: "fas fa-headset"
-        },
-        {
-          title: "Quality Audits",
-          content:
-            " Get reliable reports with documentation that would be extremely useful to determine, configure and standardize business performance indicators at any time. ",
-          color: "green",
-          icon: "fas fa-chalkboard-teacher"
         }
       ]
     };

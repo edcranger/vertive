@@ -1,14 +1,14 @@
 <template>
-  <div class="esd yellow lighten-3">
+  <div class="esd">
     <v-container class="bpa-content">
       <p class="servicesTitle font-weight-black">
-        <span class="orange--text">Embedded</span>
-        <br>Systems Development
+        <span class="orange--text">Internet</span>
+        <br />Of Things (IOT)
       </p>
       <v-layout row wrap>
         <v-flex xs12 class="textStyle pa-3">
-          <v-container class="pa-5">
-            <v-img :src="require('@/assets/bpa/esd.svg')" contain></v-img>
+          <v-container>
+            <v-img :src="require('@/assets/bpa/iot.png')" contain></v-img>
           </v-container>
 
           <div class="text-xs-center mt-2">
@@ -24,7 +24,7 @@
         <v-flex xs12 class="textStyle mb-3">
           <h2
             class="subheading"
-          >An embedded system is a computer system with a dedicated function within a larger mechanical or electrical system, often with real-time computing constraints. It is embedded as part of a complete device often including hardware and mechanical parts. Embedded systems control many devices in common use today.</h2>
+          >The Internet of Things (IoT) refers to a vast number of “things” that are connected to the internet so they can share data with other things. Real-world Internet of Things examples range from a smart home that automatically adjusts heating and lighting to a smart factory that monitors industrial machines to look for problems, then automatically adjusts to avoid failures.</h2>
         </v-flex>
       </v-layout>
       <v-layout align-center justify-space-around row wrap fill-height class="mt-4">
@@ -37,7 +37,7 @@
           data-aos="flip-left"
           data-aos-duration="1000"
         >
-          <v-icon size="60" :color="item.color">{{item.icon}}</v-icon>
+          <v-icon size="60" color="cyan">{{item.icon}}</v-icon>
           <p class="text-xs-center mt-2">{{item.title}}</p>
         </v-flex>
       </v-layout>

@@ -6,8 +6,8 @@
 
         <v-spacer></v-spacer>
 
-        <v-btn v-for="icon in icons" :key="icon" class="mx-3" dark icon>
-          <v-icon size="24px">{{ icon }}</v-icon>
+        <v-btn v-for="icon in icons" :href="icon.link" :key="icon" class="mx-3" dark icon>
+          <v-icon size="24px">{{ icon.icon }}</v-icon>
         </v-btn>
       </v-card-title>
 
@@ -23,7 +23,16 @@
 export default {
   name: "Footer",
   data: () => ({
-    icons: ["fab fa-facebook", "fab fa-instagram"]
+    icons: [
+      {
+        link: `https://www.facebook.com/vertiveinteractive/`,
+        icon: "fab fa-facebook"
+      },
+      {
+        link: `#`,
+        icon: "fab fa-instagram"
+      }
+    ]
   })
 };
 </script>

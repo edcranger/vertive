@@ -9,7 +9,7 @@
         <v-flex xs12 md6 class="pa-3" data-aos="fade-left" data-aos-duration="1000">
           <h1 class="mb-2">What we do</h1>
           <p>We are a full service software development and digital content creation company established to provide excellent and quality service and solutions to our existing and future clients. Today, we are living in an advanced world where innovation happens in a blink of an eye. Though the availability of technology is all around us, it is not being utilized well, for not enough software developers and digital writers have been being utilized in creating software and content for a company.</p>
-          <br>
+          <br />
           <h1
             data-aos="zoom-in"
             data-aos-duration="3000"
@@ -44,14 +44,14 @@
             <v-flex xs12>
               <div class="text-xs-center">
                 <v-avatar class="text-xs-center" size="300" color="grey lighten-4">
-                  <img :src="require('@/assets/team/edison.jpg')" alt="avatar">
+                  <img :src="require('@/assets/team/edison.jpg')" alt="avatar" />
                 </v-avatar>
               </div>
             </v-flex>
             <v-flex xs12>
               <div class="text-xs-center" style="margin-top: 1em;">
                 <h1>Edison Ocampo</h1>
-                <h3>Co-Founder and CEO</h3>
+                <h3>Founder and CEO</h3>
                 <h4>Software Developer</h4>
                 <h3 class="display-2 font-weight-thin">"Greatness from small beginnings"</h3>
               </div>
@@ -64,14 +64,14 @@
               <v-flex xs12>
                 <div class="text-xs-center">
                   <v-avatar class="text-xs-center" size="300" color="grey lighten-4">
-                    <img :src="require('@/assets/team/teshi.jpg')" alt="avatar">
+                    <img :src="require('@/assets/team/teshi.jpg')" alt="avatar" />
                   </v-avatar>
                 </div>
               </v-flex>
               <v-flex xs12>
                 <div class="text-xs-center" style="margin-top: 1em;">
                   <h1>Teshi Alejo</h1>
-                  <h3>Co-Founder CCO</h3>
+                  <h3>CCO</h3>
                   <h4>UI/UX and Graphic Design</h4>
                   <h3 class="display-2 font-weight-thin">"Every artist was first an amateur"</h3>
                 </div>
