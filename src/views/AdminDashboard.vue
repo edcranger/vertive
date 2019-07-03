@@ -1,63 +1,10 @@
 <template>
   <div class="admin-dashboard">
-    <v-layout justify-space-around class="pa-1 amber lighten-4 navbar2">
-      <router-link to="/adminDashboard" class="mt-2">
-        <a href="#">
-          <v-icon large color="blue darken-2">fas fa-list</v-icon>
-        </a>
-      </router-link>
-      <v-btn
-        large
-        flat
-        app
-        v-for="(menuData, index) in menuDatas"
-        route
-        :to="menuData.route"
-        :key="index"
-      >
-        <v-icon large color="blue darken-2">{{ menuData.icon }}</v-icon>
-      </v-btn>
-      <LogoutDialog />
-    </v-layout>
+    <div class="hidden-sm-and-up"></div>
     <v-container fluid>
       <v-layout row wrap>
         <v-flex xs12 md3>
-          <v-card height="200" class="elevation-0 hidden-sm-and-down">
-            <v-navigation-drawer permanent absolute>
-              <v-toolbar flat class="transparent">
-                <v-list class="pa-0">
-                  <v-list-tile avatar>
-                    <v-list-tile-avatar>
-                      <img src="https://randomuser.me/api/portraits/men/85.jpg" />
-                    </v-list-tile-avatar>
-
-                    <v-list-tile-content>
-                      <v-list-tile-title>John Leider</v-list-tile-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
-                </v-list>
-              </v-toolbar>
-
-              <v-list class="pt-0" dense>
-                <v-divider></v-divider>
-
-                <v-list-tile v-for="menuData in menuDatas" :key="menuData.title">
-                  <v-list-tile-action>
-                    <v-badge color="red">
-                      <template v-slot:badge>
-                        <span v-if="unReadCount != 0">{{unReadCount}}</span>
-                      </template>
-                      <v-icon>{{ menuData.icon }}</v-icon>
-                    </v-badge>
-                  </v-list-tile-action>
-
-                  <v-list-tile-content>
-                    <v-list-tile-title>{{ menuData.title }}</v-list-tile-title>
-                  </v-list-tile-content>
-                </v-list-tile>
-              </v-list>
-            </v-navigation-drawer>
-          </v-card>
+          <AdminNav :menuDatas="menuDatas" :unReadCount="unReadCount" />
         </v-flex>
         <v-flex xs12 md9 class="mx-auto">
           <router-view
@@ -74,10 +21,12 @@
 <script>
 import { fb } from "../firebase";
 import LogoutDialog from "@/components/LogoutDialog";
+import AdminNav from "@/components/AdminNav";
 export default {
   name: "AdminDashboard",
   components: {
-    LogoutDialog
+    LogoutDialog,
+    AdminNav
   },
   data() {
     return {
@@ -86,14 +35,26 @@ export default {
       selected: [2],
       menuDatas: [
         {
+          title: "Dashboard",
+          route: "/adminDashboard",
+          color: "dark",
+          icon: "dashboard",
+          iconClass: "indigo white--text"
+        },
+        {
           title: "Messages",
           route: "/adminDashboard/messages",
-          icon: "fas fa-envelope-square"
+          color: "dark",
+          badge: true,
+          icon: "assignment",
+          iconClass: "blue white--text"
         },
         {
           title: "Make Admin",
           route: "/adminDashboard/makeAdmin",
-          icon: "fas fa-user-lock"
+          color: "success",
+          icon: "call_to_action",
+          iconClass: "amber white--text"
         }
       ],
       adminDatas: [

@@ -1,48 +1,68 @@
 <template>
-  <div class="view-message px-5">
+  <div class="view-message px-3">
     <v-container class="elevation-3">
       <v-list expand subheader>
         <v-card-actions>
-          <v-icon large class="ml-2">message</v-icon>
+          <v-btn flat route to="/adminDashboard/messages">
+            <v-icon large class="mr-2">fas fa-long-arrow-alt-left</v-icon>
+            <span>back</span>
+          </v-btn>
 
           <v-spacer></v-spacer>
-          <v-btn app flat>
-            <v-icon class="trasbin" @click="deleteMessage(param)">delete</v-icon>
-          </v-btn>
+          <!---Deleting Dialog--->
+          <v-dialog v-model="dialogDeleteMessage" width="500">
+            <template v-slot:activator="{ on }">
+              <v-btn app flat v-on="on">
+                <v-icon class="trasbin">delete</v-icon>
+              </v-btn>
+            </template>
+
+            <v-card>
+              <v-card-title class="headline red white--text" primary-title>Delete</v-card-title>
+
+              <v-card-text>Are you sure you want delete this message?</v-card-text>
+
+              <v-divider></v-divider>
+
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn dark depressed color="red" app @click="deleteMessage(param)">Delete</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
         </v-card-actions>
+        <div class="mt-5" v-for="adminData in adminDatas" :key="adminData.id">
+          <div v-if="adminData.id == param">
+            <v-list-tile avatar>
+              <v-list-tile-content>
+                <v-list-tile-title>{{adminData.title}}</v-list-tile-title>
+                <v-list-tile-sub-title>Name</v-list-tile-sub-title>
+              </v-list-tile-content>
+            </v-list-tile>
 
-        <v-list-tile avatar>
-          <v-list-tile-content>
-            <v-list-tile-title>Name</v-list-tile-title>
-            <v-list-tile-sub-title>Edison Ocampo</v-list-tile-sub-title>
-          </v-list-tile-content>
-        </v-list-tile>
+            <v-list-tile avatar>
+              <v-list-tile-content>
+                <v-list-tile-title>{{adminData.headline}}</v-list-tile-title>
+                <v-list-tile-sub-title>+639-958-402-424</v-list-tile-sub-title>
+              </v-list-tile-content>
+            </v-list-tile>
 
-        <v-list-tile avatar>
-          <v-list-tile-content>
-            <v-list-tile-title>Phone Number</v-list-tile-title>
-            <v-list-tile-sub-title>+639-958-402-424</v-list-tile-sub-title>
-          </v-list-tile-content>
-        </v-list-tile>
+            <v-list-tile avatar>
+              <v-list-tile-content>
+                <v-list-tile-title>Email</v-list-tile-title>
+                <v-list-tile-sub-title>edisonocampo.eo@gmail.com</v-list-tile-sub-title>
+              </v-list-tile-content>
+            </v-list-tile>
 
-        <v-list-tile avatar>
-          <v-list-tile-content>
-            <v-list-tile-title>Email</v-list-tile-title>
-            <v-list-tile-sub-title>edisonocampo.eo@gmail.com</v-list-tile-sub-title>
-          </v-list-tile-content>
-        </v-list-tile>
-
-        <v-list-tile avatar>
-          <v-list-tile-content>
-            <v-list-tile-title>Asking about</v-list-tile-title>
-            <v-list-tile-sub-title>Internet of Things(IoT)</v-list-tile-sub-title>
-          </v-list-tile-content>
-        </v-list-tile>
-
-        <p
-          style="text-align: justify "
-          class="pa-3"
-        >hi, I just want to ask about the program and you can just try to reach me out</p>
+            <v-list-tile avatar>
+              <v-list-tile-content>
+                <v-list-tile-title>This product</v-list-tile-title>
+                <v-list-tile-sub-title>Asking for</v-list-tile-sub-title>
+              </v-list-tile-content>
+            </v-list-tile>
+            <p style="text-align: justify " class="pa-3">{{adminData.subtitle}}</p>
+          </div>
+        </div>
       </v-list>
 
       <v-divider></v-divider>
@@ -53,8 +73,10 @@
 <script>
 export default {
   name: "viewMessage",
+  props: ["adminDatas"],
   data() {
     return {
+      dialogDeleteMessage: false,
       param: this.$route.params.message_id
     };
   },
@@ -64,6 +86,7 @@ export default {
     },
     deleteMessage(data) {
       this.$emit("deleteMes", data);
+      this.$router.replace("/adminDashboard/messages");
     }
   },
   created() {
