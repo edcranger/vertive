@@ -19,7 +19,8 @@ Vue.use(VueTypedJs);
 
 let app = "";
 
-fb.auth().onAuthStateChanged(user => {
+//this function work as when there is a user signed it, it will remember and will not redirect to main page /
+fb.auth().onAuthStateChanged(() => {
   if (!app) {
     new Vue({
       router,

@@ -14,7 +14,7 @@
 
           <v-carousel
             hide-delimiters
-            hide-controls="true"
+            hide-controls
             interval="5000"
             height="120"
             class="elevation-0 mb-5"

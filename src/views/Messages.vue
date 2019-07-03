@@ -1,5 +1,5 @@
 <template>
-  <div class="messages">
+  <div class="messages mt-0 pa-0">
     <v-container>
       <v-layout row>
         <v-flex xs12>
@@ -19,22 +19,31 @@
             </v-toolbar>
 
             <v-list two-line>
-              <template v-for="(item, index) in items">
-                <v-list-tile :key="item.title" avatar ripple @click="toggle(index)">
+              <template v-for="(adminData, index) in adminDatas">
+                <v-list-tile
+                  :key="adminData.title"
+                  route
+                  :to="{name: 'viewMessage', params: {message_id: adminData.id }}"
+                  avatar
+                  ripple
+                  @click="boom(index);"
+                >
                   <v-list-tile-content>
-                    <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-                    <v-list-tile-sub-title class="text--primary">{{ item.headline }}</v-list-tile-sub-title>
-                    <v-list-tile-sub-title>{{ item.subtitle }}</v-list-tile-sub-title>
+                    <v-list-tile-title
+                      :class="{'font-weight-black': adminData.unRead } "
+                    >{{ adminData.title }}</v-list-tile-title>
+                    <v-list-tile-sub-title class="text--primary">{{ adminData.headline }}</v-list-tile-sub-title>
+                    <v-list-tile-sub-title>{{ adminData.subtitle }}</v-list-tile-sub-title>
                   </v-list-tile-content>
 
-                  <v-list-tile-action>
-                    <v-list-tile-action-text>{{ item.action }}</v-list-tile-action-text>
+                  <v-list-tile-action @click="toggle(index)">
+                    <v-list-tile-action-text>{{ adminData.action }}</v-list-tile-action-text>
                     <v-icon v-if="selected.indexOf(index) < 0" color="grey lighten-1">star_border</v-icon>
 
                     <v-icon v-else color="yellow darken-2">star</v-icon>
                   </v-list-tile-action>
                 </v-list-tile>
-                <v-divider v-if="index + 1 < items.length" :key="index"></v-divider>
+                <v-divider v-if="index + 1 < adminData.length" :key="index"></v-divider>
               </template>
             </v-list>
           </v-card>
@@ -47,56 +56,28 @@
 <script>
 export default {
   name: "messages",
+  props: ["adminDatas"],
+
   data() {
     return {
-      selected: [2],
-      items: [
-        {
-          action: "15 min",
-          headline: "Brunch this weekend?",
-          title: "Ali Connors",
-          subtitle:
-            "I'll be in your neighborhood doing errands this weekend. Do you want to hang out?"
-        },
-        {
-          action: "2 hr",
-          headline: "Summer BBQ",
-          title: "me, Scrott, Jennifer",
-          subtitle: "Wish I could come, but I'm out of town this weekend."
-        },
-        {
-          action: "6 hr",
-          headline: "Oui oui",
-          title: "Sandra Adams",
-          subtitle: "Do you have Paris recommendations? Have you ever been?"
-        },
-        {
-          action: "12 hr",
-          headline: "Birthday gift",
-          title: "Trevor Hansen",
-          subtitle:
-            "Have any ideas about what we should get Heidi for her birthday?"
-        },
-        {
-          action: "18hr",
-          headline: "Recipe to try",
-          title: "Britta Holt",
-          subtitle:
-            "We should eat this: Grate, Squash, Corn, and tomatillo Tacos."
-        }
-      ]
+      selected: [2]
     };
   },
   methods: {
     toggle(index) {
-      const i = this.selected.indexOf(index);
-
-      if (i > -1) {
-        this.selected.splice(i, 1);
-      } else {
-        this.selected.push(index);
-      }
+      //transfer this function to the adminDashboard and then emit the index from @click="toggle(index)" back to the parent
+      // const i = this.selected.indexOf(index);
+      // if (i > -1) {
+      //   this.selected.splice(i, 1);
+      // } else {
+      //   this.selected.push(index);
+      // }
     }
+    // ,
+    // boom(index) {
+    //   this.$emit("clickRead", index);
+
+    // }
   }
 };
 </script>

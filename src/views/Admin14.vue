@@ -7,7 +7,7 @@
             <v-card class="elevation-1 pa-3">
               <v-card-text>
                 <div class="layout column align-center">
-                  <h1 class="flex my-4 purple--text">Vertive Admin Login</h1>
+                  <h1 class="flex my-4 orange--text">Vertive Admin Login</h1>
                 </div>
                 <v-form>
                   <v-text-field
@@ -37,7 +37,7 @@
                 <v-btn
                   @click="login"
                   block
-                  color="purple"
+                  color="purple darken-4"
                   class="white--text"
                   :loading="loading"
                 >Login</v-btn>
@@ -86,6 +86,13 @@ export default {
           console.log(error);
         });
     }
+  },
+  mounted() {
+    fb.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.$router.replace("/adminDashboard");
+      }
+    });
   }
 };
 </script>

@@ -8,6 +8,7 @@ import Admin14 from "./views/Admin14.vue";
 import AdminDashboard from "./views/AdminDashboard.vue";
 import Messages from "./views/Messages.vue";
 import MakeAdmin from "./views/MakeAdmin.vue";
+import ViewMessage from "./views/ViewMessage.vue";
 import { fb } from "./firebase";
 
 Vue.use(Router);
@@ -59,6 +60,11 @@ const router = new Router({
           path: "makeAdmin",
           name: "makeAdmin",
           component: MakeAdmin
+        },
+        {
+          path: "viewMessage/:message_id",
+          name: "viewMessage",
+          component: ViewMessage
         }
       ]
     }

@@ -51,9 +51,9 @@ export default {
   name: "makeAdmin",
   data() {
     return {
-      name: null,
-      email: null,
-      password: null,
+      name: "",
+      email: "",
+      password: "",
       show1: false,
       rules: {
         required: value => !!value || "Required.",

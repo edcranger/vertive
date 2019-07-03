@@ -3,7 +3,7 @@
     <v-container class="bpa-content">
       <p class="servicesTitle font-weight-black">
         <span class="orange--text">Internet</span>
-        <br />Of Things (IOT)
+        Of Things (IoT)
       </p>
       <v-layout row wrap>
         <v-flex xs12 class="textStyle pa-3">
