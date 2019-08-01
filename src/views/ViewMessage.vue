@@ -66,6 +66,7 @@
       </v-list>
 
       <v-divider></v-divider>
+      <v-btn @click="powerOn">clickMe</v-btn>
     </v-container>
   </div>
 </template>
@@ -87,8 +88,31 @@ export default {
     deleteMessage(data) {
       this.$emit("deleteMes", data);
       this.$router.replace("/adminDashboard/messages");
+    },
+    powerOn() {
+      var request = new XMLHttpRequest();
+
+      request.open(
+        "PUT",
+        "188.166.206.43/e8097c404a814f2b842fa925b2a52f8f/update/D13"
+      );
+
+      request.setRequestHeader("Content-Type", "application/json");
+
+      request.onreadystatechange = function() {
+        if (this.readyState === 4) {
+          console.log("Status:", this.status);
+          console.log("Headers:", this.getAllResponseHeaders());
+          console.log("Body:", this.responseText);
+        }
+      };
+
+      var body = ["1", "2"];
+
+      request.send(JSON.stringify(body));
     }
   },
+
   created() {
     this.boom();
   }
@@ -97,3 +121,4 @@ export default {
 
 <style>
 </style>
+

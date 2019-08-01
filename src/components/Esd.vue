@@ -41,17 +41,20 @@
           <p class="text-xs-center mt-2">{{item.title}}</p>
         </v-flex>
       </v-layout>
+      <v-btn @click="yeah != yeah">{{popo}}</v-btn>
     </v-container>
   </div>
 </template>
 
-<script>
+  <script>
 export default {
   name: "Esd",
   props: ["servicesInfo"],
+
   components: {},
   data() {
     return {
+      yeah: false,
       dialog: false,
       items: [
         {
