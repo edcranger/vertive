@@ -81,16 +81,7 @@ export default {
             "Related work experience is an advantage."
           ]
         },
-        {
-          title: "Subject Matter Experts",
-          pic: require("@/assets/staff/sme.png"),
-          skills: [
-            "Machine Learning / Artificial Intelligence Development -  Professionals with expertise of Linear Algebra, Multivariable Calculus and Statistics",
-            "Medical Field Experts:",
-            "Professionals such as Nurses, Pharmacists, Doctors Etc.. ",
-            "Willing to learn about Data Structures and Innovation patterns."
-          ]
-        }
+
       ]
     };
   }
